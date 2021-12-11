@@ -1,12 +1,15 @@
-import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 
 function App() {
+  const n = Math.floor(Math.random() * 10)
+  // P.26
+  const threshold = 5
+  // P.27
+  const list = ['Patty', 'Rolley', 'Bobby']
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -18,6 +21,17 @@ function App() {
         >
           Learn React
         </a>
+        {/* P.26 */}
+        <div>
+          {n > threshold && <p>`n` is larger than {threshold}</p>}
+          <p>`n` is {n % 2 === 0 ? 'even' : 'odd'}</p>
+        </div>
+        {/* P.27 */}
+        <ul>
+          {list.map((name) => (
+            <li>Hello, {name}!</li>
+          ))}
+        </ul>
       </header>
     </div>
   )
