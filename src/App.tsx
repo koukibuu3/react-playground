@@ -1,3 +1,4 @@
+import Greets from 'components/Greets'
 import { FC } from 'react'
 import './App.css'
 
@@ -17,6 +18,7 @@ const App: FC = () => (
       >
         Learn React
       </a>
+      <Greets name="Patty" times={4} />
     </header>
   </div>
 )
