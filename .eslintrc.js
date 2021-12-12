@@ -84,6 +84,7 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
+    'react/function-component-definition': 'off',
   },
   overrides: [
     {
