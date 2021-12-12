@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import './App.css';
+import { FC } from 'react'
+import './App.css'
 
 const App: FC = () => (
   <div className="App">
@@ -19,6 +19,6 @@ const App: FC = () => (
       </a>
     </header>
   </div>
-);
+)
 
-export default App;
+export default App
