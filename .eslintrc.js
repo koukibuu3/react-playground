@@ -34,6 +34,7 @@ module.exports = {
   ],
   root: true,
   rules: {
+    // occur error in `import React from 'react'` with react-scripts 4.0.1
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'lines-between-class-members': [
@@ -77,6 +78,14 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
+      },
+    ],
     'react/jsx-filename-extension': [
       'error',
       {
@@ -92,15 +101,6 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
-    'react/function-component-definition': 'off',
-    'prefer-arrow/prefer-arrow-functions': [
-      'error',
-      {
-        disallowPrototype: true,
-        singleReturnOnly: false,
-        classPropertiesAllowed: false,
-      },
-    ],
   },
   overrides: [
     {
