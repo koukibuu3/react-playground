@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import ClassApp from 'class/App'
 import Counter from 'Counter'
 import App from 'App'
+import Timer from 'Timer'
 import reportWebVitals from './reportWebVitals'
 
 import 'semantic-ui-css/semantic.min.css'
@@ -13,6 +14,7 @@ ReactDOM.render(
     <App />
     <ClassApp />
     <Counter />
+    <Timer />
   </React.StrictMode>,
   document.getElementById('root'),
 )
