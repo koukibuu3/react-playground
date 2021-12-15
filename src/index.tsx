@@ -4,6 +4,7 @@ import ClassApp from 'class/App'
 import Counter from 'Counter'
 import App from 'App'
 import Timer from 'Timer'
+import HOCCounter from 'HOCCounter'
 import reportWebVitals from './reportWebVitals'
 
 import 'semantic-ui-css/semantic.min.css'
@@ -15,6 +16,7 @@ ReactDOM.render(
     <ClassApp />
     <Counter />
     <Timer />
+    <HOCCounter max={100} />
   </React.StrictMode>,
   document.getElementById('root'),
 )
