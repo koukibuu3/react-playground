@@ -1,4 +1,4 @@
-import { VFC, useEffect, useState, useMemo, useCallback, useRef } from 'react'
+import { VFC, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react'
 import { getPrimes } from 'utils/math-tool'
 import 'App.css'
@@ -7,19 +7,23 @@ const Timer: VFC<{ limit: number }> = ({ limit }) => {
   const [timeLeft, setTimeLeft] = useState(limit)
   const primes = useMemo(() => getPrimes(limit), [limit])
   const timerId = useRef<NodeJS.Timeout>()
-  const reset = useCallback(() => setTimeLeft(limit), [limit])
-  const tick = (): void => setTimeLeft((t) => t - 1)
+  const tick = () => setTimeLeft((t) => t - 1)
 
-  useEffect(() => {
-    const clearTimer = () => {
-      if (timerId.current) clearInterval(timerId.current)
-    }
-    reset()
+  const clearTimer = () => {
+    if (timerId.current) clearInterval(timerId.current)
+  }
+
+  const reset = useCallback(() => {
     clearTimer()
     timerId.current = setInterval(tick, 1000)
+    setTimeLeft(limit)
+  }, [limit])
+
+  useEffect(() => {
+    reset()
 
     return clearTimer
-  }, [limit, reset])
+  }, [reset])
 
   useEffect(() => {
     if (timeLeft === 0) reset()
@@ -27,7 +31,7 @@ const Timer: VFC<{ limit: number }> = ({ limit }) => {
 
   return (
     <>
-      <div>---- ここからタイマーコンポーネント1（Hooks） ----</div>
+      <div>---- ここからタイマーコンポーネント2（Hooks） ----</div>
       <Card>
         <Statistic className="number-board">
           <Statistic.Label>time</Statistic.Label>
@@ -44,7 +48,7 @@ const Timer: VFC<{ limit: number }> = ({ limit }) => {
           </Button>
         </Card.Content>
       </Card>
-      <div>---- ここまでタイマーコンポーネント1（Hooks） ----</div>
+      <div>---- ここまでタイマーコンポーネント2（Hooks） ----</div>
     </>
   )
 }

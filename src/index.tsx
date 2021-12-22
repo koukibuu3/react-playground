@@ -7,6 +7,7 @@ import Timer from 'Timer'
 import HOCCounter from 'HOCCounter'
 import HooksCounter from 'HooksCounter'
 import HooksTimer from 'HooksTimer'
+import HooksTimer2 from 'HooksTimer2'
 import reportWebVitals from './reportWebVitals'
 
 import 'semantic-ui-css/semantic.min.css'
@@ -21,6 +22,7 @@ ReactDOM.render(
     <HOCCounter max={100} />
     <HooksCounter />
     <HooksTimer limit={90} />
+    <HooksTimer2 limit={90} />
   </React.StrictMode>,
   document.getElementById('root'),
 )
