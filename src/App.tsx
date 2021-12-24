@@ -13,44 +13,50 @@ import HooksMemoizeTimer3 from '9-4_hooks_memoize/Timer3'
 import 'App.css'
 
 const App: React.VFC = () => (
-  <div className="ui two column grid">
-    <div className="column">
-      <h2 className="ui header">8-2. コンポーネントとProps</h2>
-      <ComponentPropsApp />
+  <>
+    <h1 className="ui header">
+      りあクト! TypeScriptで始めるつらくないReact開発
+    </h1>
+    <div className="ui divider" />
+    <div className="ui two column grid">
+      <div className="column">
+        <h2 className="ui header">8-2. コンポーネントとProps</h2>
+        <ComponentPropsApp />
+      </div>
+      <div className="column">
+        <h2 className="ui header">8-3. コンポーネントで学ぶState</h2>
+        <ComponentStateApp />
+      </div>
+      <div className="column">
+        <h2 className="ui header">8-3. コンポーネントで学ぶState</h2>
+        <ComponentStateCounter />
+      </div>
+      <div className="column">
+        <h2 className="ui header">8-4. コンポーネントのライフサイクル</h2>
+        <ComponentLifecycleTimer />
+      </div>
+      <div className="column">
+        <h2 className="ui header">9-1. Hooksに至るまでの物語</h2>
+        <HooksHocCounter max={100} />
+      </div>
+      <div className="column">
+        <h2 className="ui header">9-2. HooksでStateを扱う</h2>
+        <HooksStateCounter />
+      </div>
+      <div className="column">
+        <h2 className="ui header">9-3. Hooksで副作用を扱う</h2>
+        <HooksEffectTimer limit={90} />
+      </div>
+      <div className="column">
+        <h2 className="ui header">9-4. Hooksにおけるメモ化を理解する</h2>
+        <HooksMemoizeTimer2 limit={90} />
+      </div>
+      <div className="column">
+        <h2 className="ui header">9-4. Hooksにおけるメモ化を理解する</h2>
+        <HooksMemoizeTimer3 limit={90} />
+      </div>
     </div>
-    <div className="column">
-      <h2 className="ui header">8-3. コンポーネントで学ぶState</h2>
-      <ComponentStateApp />
-    </div>
-    <div className="column">
-      <h2 className="ui header">8-3. コンポーネントで学ぶState</h2>
-      <ComponentStateCounter />
-    </div>
-    <div className="column">
-      <h2 className="ui header">8-4. コンポーネントのライフサイクル</h2>
-      <ComponentLifecycleTimer />
-    </div>
-    <div className="column">
-      <h2 className="ui header">9-1. Hooksに至るまでの物語</h2>
-      <HooksHocCounter max={100} />
-    </div>
-    <div className="column">
-      <h2 className="ui header">9-2. HooksでStateを扱う</h2>
-      <HooksStateCounter />
-    </div>
-    <div className="column">
-      <h2 className="ui header">9-3. Hooksで副作用を扱う</h2>
-      <HooksEffectTimer limit={90} />
-    </div>
-    <div className="column">
-      <h2 className="ui header">9-4. Hooksにおけるメモ化を理解する</h2>
-      <HooksMemoizeTimer2 limit={90} />
-    </div>
-    <div className="column">
-      <h2 className="ui header">9-4. Hooksにおけるメモ化を理解する</h2>
-      <HooksMemoizeTimer3 limit={90} />
-    </div>
-  </div>
+  </>
 )
 
 export default App
