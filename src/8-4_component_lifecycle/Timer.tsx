@@ -1,6 +1,5 @@
 import { Component, ReactElement } from 'react'
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react'
-import 'App.css'
 
 const LIMIT = 60
 type State = { timeLeft: number }
@@ -37,25 +36,18 @@ class Timer extends Component<unknown, State> {
     const { timeLeft } = this.state
 
     return (
-      <div className="container">
-        <span>---- ここからタイマーコンポーネント（class） ----</span>
-        <header>
-          <h1>タイマー</h1>
-        </header>
-        <Card>
-          <Statistic className="number-board">
-            <Statistic.Label>time</Statistic.Label>
-            <Statistic.Value>{timeLeft}</Statistic.Value>
-          </Statistic>
-          <Card.Content>
-            <Button color="red" fluid onClick={this.reset}>
-              <Icon name="redo" />
-              Reset
-            </Button>
-          </Card.Content>
-        </Card>
-        <span>---- ここまでタイマーコンポーネント（class） ----</span>
-      </div>
+      <Card>
+        <Statistic className="number-board">
+          <Statistic.Label>time</Statistic.Label>
+          <Statistic.Value>{timeLeft}</Statistic.Value>
+        </Statistic>
+        <Card.Content>
+          <Button color="red" fluid onClick={this.reset}>
+            <Icon name="redo" />
+            Reset
+          </Button>
+        </Card.Content>
+      </Card>
     )
   }
 }

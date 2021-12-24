@@ -34,8 +34,7 @@ const CounterComponent = React.createClass({
     const { count } = this.state
 
     return (
-      <div>
-        <span>---- ここからカウンターコンポーネント（HOC） ----</span>
+      <>
         <div>
           {count} / {max}
         </div>
@@ -45,8 +44,7 @@ const CounterComponent = React.createClass({
         <button onClick={increment} type="button">
           +1
         </button>
-        <span>---- ここまでカウンターコンポーネント（HOC） ----</span>
-      </div>
+      </>
     )
   },
 })
