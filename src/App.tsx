@@ -9,6 +9,8 @@ import HooksStateCounter from '9-2_hooks_state/Counter'
 import HooksEffectTimer from '9-3_hooks_effect/Timer'
 import HooksMemoizeTimer2 from '9-4_hooks_memoize/Timer2'
 import HooksMemoizeTimer3 from '9-4_hooks_memoize/Timer3'
+import HooksCustomTimer from '9-5_hooks_custom/Timer'
+import HooksCustomTimer2 from '9-5_hooks_custom/containers/Timer'
 
 import 'App.css'
 
@@ -54,6 +56,18 @@ const App: React.VFC = () => (
       <div className="column">
         <h2 className="ui header">9-4. Hooksにおけるメモ化を理解する</h2>
         <HooksMemoizeTimer3 limit={90} />
+      </div>
+      <div className="column">
+        <h2 className="ui header">
+          9-5. Custom Hookでロジックを分離・再利用する
+        </h2>
+        <HooksCustomTimer limit={90} />
+      </div>
+      <div className="column">
+        <h2 className="ui header">
+          9-5. Custom Hookでロジックを分離・再利用する
+        </h2>
+        <HooksCustomTimer2 limit={90} />
       </div>
     </div>
   </>
