@@ -1,6 +1,6 @@
 import { VFC, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react'
-import { getPrimes } from 'utils/math-tool'
+import { getPrimes } from './utils/math-tool'
 import 'App.css'
 
 const Timer: VFC<{ limit: number }> = ({ limit }) => {

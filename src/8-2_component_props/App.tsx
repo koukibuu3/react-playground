@@ -1,8 +1,8 @@
 import { VFC } from 'react'
 
-import Greets from 'components/Greets'
-import CharacterList, { Character } from 'components/CharacterList'
-import './App.css'
+import Greets from './Greets'
+import CharacterList, { Character } from './CharacterList'
+import 'App.css'
 
 const App: VFC = () => {
   const characters: Character[] = [
@@ -14,23 +14,11 @@ const App: VFC = () => {
     },
     {
       id: 2,
-      name: '流川 楓',
-      grade: 1,
-      height: 187,
-    },
-    {
-      id: 3,
-      name: '宮城リョータ',
-      grade: 2,
-      height: 168,
-    },
-    {
-      id: 4,
       name: '三井 寿',
       grade: 3,
     },
     {
-      id: 5,
+      id: 3,
       name: '赤木剛憲',
       grade: 3,
       height: 197,
@@ -40,19 +28,6 @@ const App: VFC = () => {
   return (
     <div className="container">
       <div>
-        <p>
-          Edit
-          <code>src/App.tsx</code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <Greets name="Patty" times={4} />
       </div>
 
