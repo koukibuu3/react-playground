@@ -24,5 +24,8 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "src/10-3_react_router"
   ]
 }
